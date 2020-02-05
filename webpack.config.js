@@ -27,7 +27,8 @@ module.exports = {
         loader: 'babel-loader',
         query: {
           babelrc: false,
-          presets: [['es2015', { modules: false }], 'react']
+          presets: [['@babel/preset-env', { modules: false }], '@babel/preset-react'],
+          plugins: ['@babel/plugin-proposal-class-properties']
         }
       }
     ]

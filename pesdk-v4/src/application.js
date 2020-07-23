@@ -29,11 +29,15 @@ class ApplicationComponent extends React.Component {
       assets={{
         baseUrl: 'node_modules/photoeditorsdk/assets'
       }}
-      editor={{image: this.props.image }}
+      editor={{
+        image: this.props.image,
+        defaultControl: "transform",
+        tools: ["transform", "filter", "adjustments", "focus", "text", "textdesign", "overlay"]
+      }}
       style={{
         width: '100vw',
         height: '100vh'
-      }} 
+      }}
       ref={this.pesdk}
     />)
   }
